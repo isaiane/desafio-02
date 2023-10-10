@@ -10,7 +10,7 @@ declare module 'knex/types/tables' {
       password: string
       createdAt: string
       updatedAt: string
-      lastLoginAt: string | null
+      lastLoginAt: Date | null
       token: string | null
       tokenExpiresAt: Date | null
     }

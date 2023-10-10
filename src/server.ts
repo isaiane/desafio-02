@@ -1,14 +1,5 @@
-import fastify from 'fastify'
 import { env } from './env'
-import { usersRoutes } from './routes/users'
-import { authRoutes } from './routes/auth'
-import { mealRoutes } from './routes/meals'
-
-const app = fastify()
-
-app.register(authRoutes)
-app.register(usersRoutes, { prefix: '/users' })
-app.register(mealRoutes, { prefix: '/meals' })
+import { app } from './app'
 
 app
   .listen({
